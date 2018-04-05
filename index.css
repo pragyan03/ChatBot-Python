@@ -1,0 +1,131 @@
+body
+{
+	overflow-x: hidden;
+	font-family: 'Raleway', sans-serif;
+}
+.header
+{
+	background-color: #377ef0;
+	border-bottom: solid 1px black;
+}
+.header .col-sm-5 h3
+{
+	color: white;
+	font-size: 2.2vw;
+	font-weight: bold;
+}
+.header .col-sm-5
+{
+	display: inline-block;
+}
+.forImg,.headerTitle
+{
+	display: inline-block;
+}
+.headerTitle
+{
+	vertical-align: middle;
+}
+
+.projectTitle h2
+{
+	font-size: 2.5vw;
+	color: white;
+	font-weight: bolder;
+	vertical-align: middle;
+}
+.madeTitle h3
+{
+	font-size: 1.1vw;
+}
+.madeTitle h4
+{
+	text-decoration: underline;
+}
+.madeTitle
+{
+	text-align: right;
+}
+.chatBody
+{
+	min-height: 250px;
+	max-height: 251px;
+	min-width: 90%;
+	overflow-y: scroll;
+	border-bottom: solid 1px black;
+	margin-top: 3px;
+	margin: 5px;
+	margin-bottom: 10px;
+	padding-left: 3px;
+	padding: 5px 5px;
+}
+.screen
+{
+	border: solid 1px black;
+}
+.chatHeader
+{
+	border-bottom: solid 1px black;
+}
+.sendBox
+{
+	padding: 1%;
+}
+#msgJJ
+{
+	border-bottom: solid 0.3px black;
+	font-weight: bold;
+}
+.titleSS
+{
+	padding: 2%;
+    font-size: 1.7vw;
+    font-weight: bold;
+    text-align: center;
+    background-color: #7d93f7;
+}
+input
+{
+	width: 98%;
+	border-radius: 8px;
+	border: solid 1px black;
+	padding-left: 2%;
+}
+button
+{
+	width: 100%;
+	border: solid 1px black;
+	border-radius: 10px;
+}
+button:hover
+{
+	box-shadow: 0 0 15px #afafaf;
+}
+input:focus,input:active,button:focus,button:active
+{
+	outline: none;
+}
+#myMessage
+{
+	font-weight: bold;
+}
+.footer
+{
+	min-height: 55px;
+	background-color: #377ef0;
+	margin-top: 6.6%;
+}
+.footer p
+{
+	font-size: 1.2vw;
+	margin-top: 4%;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+

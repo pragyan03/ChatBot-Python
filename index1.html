@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Chat Room</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="index.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function() {
+	var socket = io.connect('http://localhost:5000');
+	socket.on('connect', function() {
+		socket.send('User has connected!');
+	});
+	socket.on('message', function(msg) {
+		$("#messages").append('<li id="msgJJ">'+msg+'</li>');
+		console.log('Received message');
+	});
+	$('#sendbutton').on('click', function() {
+		socket.send($('#myMessage').val());
+		$('#myMessage').val('');
+	});
+});
+</script>
+	<div class="container-fluid">
+		<div class="row header">
+			<div class="col-sm-5">
+				<img class="forImg" src="images.png" style="width: 120px;height: 120px;">
+				<div class="headerTitle">
+					<h3>Python Project</h3>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="projectTitle">
+					<h2>
+						Chat Application
+					</h2>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="madeTitle">
+					<h4>Made By</h4>
+					<h3>Pragyan Dalmia</h3>
+					<h3>159101094</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="container-fluid row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4" style="">
+			<div class="screen">
+				<div class="chatHeader">
+					<div class="titleSS">ChatApp</div>
+				</div>
+				<div class="chatBody" id="messages">
+								
+				</div>
+				<div class="row sendBox">
+				<div class="col-sm-9">
+					<input type="text" placeholder="Type your Message..." id="myMessage">
+				</div>
+				<div class="col-sm-3">
+					<button type="send" id="sendbutton">Send</button>
+				</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-sm-4"></div>
+	</div>
+	<div class="container-fluid footer">
+		<div class="col-sm-4">
+			<div class="copy">
+				<p><span class="glyphicon glyphicon-copyright-mark" style="margin-right: 2%;"></span>Copyright 2017</p>
+			</div>
+		</div>
+		<div class="col-sm-4">
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
+</body>
+</html>
